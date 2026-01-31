@@ -17,18 +17,18 @@ const ViewProductsDetalisHook = (prodID) => {
     const productLike = useSelector((state) => state.allproducts.productLike)
     //to show products item
     let item = [];
-    if (oneProducts.data)
-        item = oneProducts.data;
+    if (oneProducts?.data)
+        item = oneProducts?.data;
     else
         item = []
 
     useEffect(() => {
-        if (item.category)
-            dispatch(getOneCategory(item.category))
+        if (item?.category)
+            dispatch(getOneCategory(item?.category))
         if (item.brand)
-            dispatch(getOneBrand(item.brand))
+            dispatch(getOneBrand(item?.brand))
         if (item.category)
-            dispatch(getProductLike(item.category))
+            dispatch(getProductLike(item?.category))
 
     }, [item])
 
@@ -44,21 +44,21 @@ const ViewProductsDetalisHook = (prodID) => {
 
     //to show category item
     let cat = [];
-    if (oneCategory.data)
-        cat = oneCategory.data;
+    if (oneCategory?.data)
+        cat = oneCategory?.data;
     else
         cat = []
 
     //to show brand item
     let brand = [];
-    if (oneBrand.data)
-        brand = oneBrand.data;
+    if (oneBrand?.data)
+        brand = oneBrand?.data;
     else
         brand = []
 
     let prod = []
-    if (productLike)
-        prod = productLike.data;
+    if (productLike?.data)
+        prod = productLike?.data;
     else
         prod = []
     return [item, images, cat, brand, prod]
