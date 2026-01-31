@@ -19,9 +19,9 @@ const AdminAllOrdersItem = ({ orderItem }) => {
                     <Row className="justify-content-center mt-2">
                         <Col sm="12" className=" d-flex flex-row justify-content-start">
                             <div className="d-inline pt-2 cat-title">
-                                طلب من..   {orderItem.user.name || ''}
+                                طلب من..   {orderItem.user?.name || 'Unknown'}
                             </div>
-                            <div style={{ color: 'black' }} className="d-inline pt-2 cat-rate me-2">{orderItem.user.email || ''}</div>
+                            <div style={{ color: 'black' }} className="d-inline pt-2 cat-rate me-2">{orderItem.user?.email || 'N/A'}</div>
                         </Col>
                     </Row>
 
